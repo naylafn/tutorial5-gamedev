@@ -20,3 +20,7 @@ func _physics_process(delta):
 		if collider.has_method("turn_on_radio"):
 			collider.turn_on_radio()
 			queue_free()
+			
+		if collider.has_method("hit_by_book"):
+			collider.hit_by_book()
+			queue_free()

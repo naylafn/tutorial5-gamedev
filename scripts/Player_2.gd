@@ -18,10 +18,8 @@ func _physics_process(delta):
 	# HORIZONTAL MOVEMENT
 	var direction := Input.get_axis("ui_left", "ui_right")
 
-	if is_crouching:
-		velocity.x = direction * crouch_speed
-	else:
-		velocity.x = direction * walk_speed
+
+	velocity.x = direction * walk_speed
 
 	# FLIP SPRITE
 	if direction > 0:

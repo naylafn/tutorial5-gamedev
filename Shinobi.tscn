@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bjy6h2dkv5jrg"]
+
+[ext_resource type="Texture2D" uid="uid://cqi7nhi0drllp" path="res://assets/shinobi sprites/Shinobi/Idle.png" id="1_2h2p8"]
+[ext_resource type="Script" uid="uid://djmxfiedkvvuf" path="res://Shinobi.gd" id="1_4ot0b"]
+[ext_resource type="AudioStream" uid="uid://d4klfayqqgoud" path="res://assets/sfx/ES_Fight, Impact Sound - 0000-0241.wav" id="3_4ot0b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le2o5"]
+atlas = ExtResource("1_2h2p8")
+region = Rect2(0, 50, 128, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ot0b"]
+atlas = ExtResource("1_2h2p8")
+region = Rect2(128, 50, 128, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2glnc"]
+atlas = ExtResource("1_2h2p8")
+region = Rect2(256, 50, 128, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e11tr"]
+atlas = ExtResource("1_2h2p8")
+region = Rect2(384, 50, 128, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5asu"]
+atlas = ExtResource("1_2h2p8")
+region = Rect2(512, 50, 128, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_725j5"]
+atlas = ExtResource("1_2h2p8")
+region = Rect2(640, 50, 128, 78)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hqvmf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le2o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ot0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2glnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e11tr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5asu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_725j5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h2p8"]
+size = Vector2(96, 233)
+
+[node name="Shinobi" type="CharacterBody2D" unique_id=1408242798]
+script = ExtResource("1_4ot0b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1076729173]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_hqvmf")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=726553758]
+position = Vector2(3, 0.5)
+shape = SubResource("RectangleShape2D_2h2p8")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=1680006050]
+stream = ExtResource("3_4ot0b")

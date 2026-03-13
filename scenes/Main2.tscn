@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ddxxkf44arxw1" path="res://assets/craftpix-891123-free-pixel-art-street-2d-backgrounds/PNG/City3/Bright/road.png" id="6_tyifh"]
 [ext_resource type="Texture2D" uid="uid://bat2f64qd4a23" path="res://assets/crate.jpg" id="8_v2mgg"]
 [ext_resource type="PackedScene" uid="uid://bcregovxmqbd8" path="res://Radio.tscn" id="8_vyq8h"]
+[ext_resource type="PackedScene" uid="uid://bjy6h2dkv5jrg" path="res://Shinobi.tscn" id="9_v2mgg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_00mg6"]
 
@@ -84,3 +85,6 @@ texture = ExtResource("8_v2mgg")
 
 [node name="Radio" parent="." unique_id=2106950034 instance=ExtResource("8_vyq8h")]
 position = Vector2(1078, 478)
+
+[node name="Shinobi" parent="." unique_id=1408242798 instance=ExtResource("9_v2mgg")]
+position = Vector2(99, 557)

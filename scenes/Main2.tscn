@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cmvg2hmgo08fn"]
+
+[ext_resource type="PackedScene" uid="uid://dvlyhuf4uyjqv" path="res://scenes/Player.tscn" id="1_bb0ps"]
+[ext_resource type="Texture2D" uid="uid://bdrwi4v7lionk" path="res://assets/craftpix-891123-free-pixel-art-street-2d-backgrounds/PNG/City3/Bright/sky.png" id="2_ckpor"]
+[ext_resource type="Texture2D" uid="uid://cktrxujt2fgfh" path="res://assets/craftpix-891123-free-pixel-art-street-2d-backgrounds/PNG/City3/Bright/houses3.png" id="3_vyq8h"]
+[ext_resource type="Texture2D" uid="uid://bafwd8cs7sxnq" path="res://assets/craftpix-891123-free-pixel-art-street-2d-backgrounds/PNG/City3/Bright/houded2.png" id="4_v2mgg"]
+[ext_resource type="Texture2D" uid="uid://bw4m2yqoump7q" path="res://assets/craftpix-891123-free-pixel-art-street-2d-backgrounds/PNG/City3/Bright/houses1.png" id="5_58vmf"]
+[ext_resource type="Texture2D" uid="uid://ddxxkf44arxw1" path="res://assets/craftpix-891123-free-pixel-art-street-2d-backgrounds/PNG/City3/Bright/road.png" id="6_tyifh"]
+[ext_resource type="Texture2D" uid="uid://bat2f64qd4a23" path="res://assets/crate.jpg" id="8_v2mgg"]
+[ext_resource type="PackedScene" uid="uid://bcregovxmqbd8" path="res://Radio.tscn" id="8_vyq8h"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_00mg6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bu7lx"]
+size = Vector2(4000, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58vmf"]
+size = Vector2(156, 152)
+
+[node name="Node2D" type="Node2D" unique_id=1148749235]
+position = Vector2(-1, -1)
+
+[node name="AnimatedSprite2D" parent="." unique_id=1622443331 instance=ExtResource("1_bb0ps")]
+z_index = 1000
+position = Vector2(611, 534)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1579230922]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=830372447]
+physics_material_override = SubResource("PhysicsMaterial_00mg6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=2120976849]
+position = Vector2(1352, 707)
+shape = SubResource("RectangleShape2D_bu7lx")
+
+[node name="Background" type="ParallaxBackground" parent="." unique_id=1476849202]
+
+[node name="Layer 1" type="ParallaxLayer" parent="Background" unique_id=833500705]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Layer 1" unique_id=383883904]
+position = Vector2(582, 234)
+texture = ExtResource("2_ckpor")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background" unique_id=1153985021]
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer" unique_id=223355874]
+position = Vector2(583, 236)
+texture = ExtResource("3_vyq8h")
+
+[node name="Layer 3" type="ParallaxLayer" parent="Background" unique_id=1234058404]
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background/Layer 3" unique_id=955811088]
+position = Vector2(593, 238)
+texture = ExtResource("4_v2mgg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Layer 3" unique_id=1032473451]
+position = Vector2(593, 226)
+texture = ExtResource("5_58vmf")
+
+[node name="Layer 2" type="ParallaxLayer" parent="Background" unique_id=2072039173]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1440, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Layer 2" unique_id=1018287517]
+position = Vector2(586, 235)
+texture = ExtResource("6_tyifh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1532244762]
+
+[node name="Crate" type="RigidBody2D" parent="." unique_id=695353626]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate" unique_id=1162168491]
+position = Vector2(1078, 606)
+shape = SubResource("RectangleShape2D_58vmf")
+
+[node name="Crate" type="Sprite2D" parent="Crate" unique_id=957434143]
+position = Vector2(1078, 604)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_v2mgg")
+
+[node name="Radio" parent="." unique_id=2106950034 instance=ExtResource("8_vyq8h")]
+position = Vector2(1078, 478)

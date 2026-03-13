@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dnlklw6pdeyqg"]
+
+[ext_resource type="Script" uid="uid://bwoqwkytxqcyy" path="res://scripts/BookProjectile.gd" id="1_if8lw"]
+[ext_resource type="Texture2D" uid="uid://bfb5fbkxsqyo4" path="res://assets/craftpix-net-242415-free-schoolgirls-anime-character-pixel-sprite-pack/Girl_1/Book.png" id="2_2ybe7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5wfx"]
+atlas = ExtResource("2_2ybe7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0ebh"]
+atlas = ExtResource("2_2ybe7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slwjv"]
+atlas = ExtResource("2_2ybe7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m44me"]
+atlas = ExtResource("2_2ybe7")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4i2v"]
+atlas = ExtResource("2_2ybe7")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbrs5"]
+atlas = ExtResource("2_2ybe7")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n1vj"]
+atlas = ExtResource("2_2ybe7")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vmrb"]
+atlas = ExtResource("2_2ybe7")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_15cxj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5wfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0ebh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slwjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m44me")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4i2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbrs5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n1vj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vmrb")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h0xiv"]
+
+[node name="BookProjectile" type="CharacterBody2D" unique_id=1722847454]
+script = ExtResource("1_if8lw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1570568835]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_15cxj")
+animation = &"flying"
+frame_progress = 0.19702032
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1897331354]
+position = Vector2(2, -40)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_h0xiv")

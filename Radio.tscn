@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bcregovxmqbd8"]
+
+[ext_resource type="Script" uid="uid://c60j4ngtyl3w6" path="res://Radio.gd" id="1_2avqv"]
+[ext_resource type="Texture2D" uid="uid://b3nr0eiqpwxj3" path="res://assets/radio2.png" id="1_ypj50"]
+[ext_resource type="AudioStream" uid="uid://dne7qxk0fpxke" path="res://assets/bg music/assets_sound_bgm.wav" id="2_guip8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vyq8h"]
+size = Vector2(145, 105)
+
+[node name="Radio" type="Area2D" unique_id=1713026596]
+script = ExtResource("1_2avqv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=733530790]
+shape = SubResource("RectangleShape2D_vyq8h")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1250533789]
+z_index = 100
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ypj50")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1756688719]
+stream = ExtResource("2_guip8")
+autoplay = true
+max_distance = 1200.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

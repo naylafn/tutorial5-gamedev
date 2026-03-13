@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cfsxflm30wefy"]
 
-[ext_resource type="Script" uid="uid://ds7hu4kqombj7" path="res://scenes/scripts/Player_2.gd" id="1_7s6vm"]
+[ext_resource type="Script" uid="uid://ds7hu4kqombj7" path="res://scripts/Player_2.gd" id="1_7s6vm"]
 [ext_resource type="Texture2D" uid="uid://dhekgeikjt1lx" path="res://assets/kenney_platformercharacters/PNG/Player/player_tilesheet.png" id="1_mn1ev"]
 [ext_resource type="Texture2D" uid="uid://1xshihxylvkf" path="res://assets/kenney_platformercharacters/Vector/player_vector.svg" id="3_e4q4y"]
 
@@ -136,6 +136,8 @@ size = Vector2(67, 96)
 
 [node name="Player2" type="CharacterBody2D" unique_id=2029023765]
 script = ExtResource("1_7s6vm")
+walk_speed = null
+gravity = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1101632246]
 position = Vector2(0, -6)

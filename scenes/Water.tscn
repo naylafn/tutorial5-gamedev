@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wntm7aud2g3b"]
 
 [ext_resource type="Texture2D" uid="uid://ccurrfub23csu" path="res://assets/tilemap.png" id="1_h7np4"]
-[ext_resource type="Script" uid="uid://bpqug74s0ld0s" path="res://scenes/scripts/Water.gd" id="1_vwe2q"]
+[ext_resource type="Script" uid="uid://bpqug74s0ld0s" path="res://scripts/Water.gd" id="1_vwe2q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vwe2q"]
 atlas = ExtResource("1_h7np4")

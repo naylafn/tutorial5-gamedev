@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ces52vru7500r"]
 
-[ext_resource type="Script" uid="uid://bs3sofxxg0cl4" path="res://scenes/scripts/Ladder.gd" id="1_hhssl"]
+[ext_resource type="Script" uid="uid://bs3sofxxg0cl4" path="res://scripts/Ladder.gd" id="1_hhssl"]
 [ext_resource type="Texture2D" uid="uid://cg4aex0kef0q1" path="res://assets/ladder.png" id="1_kmedj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhssl"]
